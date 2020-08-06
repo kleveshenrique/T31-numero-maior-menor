@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero maior ou menor</title>
+    <style>
+        input{
+            font-size: larger;            
+        }
+        label{
+            font-weight: bold;
+        }
+        button{
+            background-color:yellow;
+            width: 100px;
+        }
+        
+    </style>
+    <script>
+        function maior(){
+            let num1=parseFloat(document.getElementById("num1").value);
+            let num2=parseFloat(document.getElementById("num2").value);
+            let mensagem = "";                       
+            if(num1>num2){
+                mensagem="O numero "+ num1 +" é maior que o "+ num2;
+            }else if(num1<num2){
+                mensagem="O numero "+ num2 +" é maior que o "+ num1;
+            }else{
+                mensagem = "Os dois números são iguais"
+            }
+            alert(mensagem);
+            document.getElementById("media").innerText = mensagem;
+        }
+        function menor(){
+            let num1=parseFloat(document.getElementById("num1").value);
+            let num2=parseFloat(document.getElementById("num2").value);
+            let mensagem = "";                       
+            if(num1<num2){
+                mensagem=" O numero "+ num1 +" é menor que o "+ num2;
+            }else if(num1>num2){
+                mensagem="O numero "+ num2 +" é menor que o "+ num1;
+            }else{
+                mensagem = "Os dois números são iguais"
+            }
+            alert(mensagem);
+            document.getElementById("media").innerText = mensagem;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align: center;">Numero Maior ou Menor</div>
+        <hr>
+        <div class="group">
+            <label>Numero 1</label> 
+            <div><input type="text" id="num1" placeholder="Digite um numero"></div>
+   
+        
+            <label>Numero 2</label>
+            <div><input type="text" id="num2" placeholder="Digite outro numero"></div>
+        </div>
+        <br>
+        <button onclick="maior()">Maior</button>
+        <button onclick="menor()">Menor</button>
+        <br>  <br>
+        <label id="media"></label>
+    </div>
+</body>
+</html>
